@@ -2,6 +2,7 @@
 # -*- makefile -*-
 
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
+CONFIGURE_FLAGS += BUILD_QTHELP_DOCS=ON
 
 override_dh_install:
 	$(overridden_command)

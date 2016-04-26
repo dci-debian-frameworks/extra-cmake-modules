@@ -3,6 +3,9 @@ extra-cmake-modules (5.21.0-0ubuntu1) UNRELEASED; urgency=medium
   * New upstream release, xenial backport. 
   * Bump to latest. 
   * Add missing dep for qt help. 
+  * Seems BUILD_QTHELP_DOCS is OFF by default, Turning ON
+    in rules, with CONFIGURE_FLAGS. This will hopefully silence
+    the missing deps check in CI. 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 25 Apr 2016 11:57:30 -0700
 
