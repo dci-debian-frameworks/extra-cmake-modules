@@ -2,7 +2,10 @@
 # -*- makefile -*-
 
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
-CONFIGURE_FLAGS += BUILD_QTHELP_DOCS=ON
+DEB_CMAKE_CUSTOM_FLAGS += BUILD_QTHELP_DOCS=ON
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(DEB_CMAKE_CUSTOM_FLAGS)
 
 override_dh_install:
 	$(overridden_command)
